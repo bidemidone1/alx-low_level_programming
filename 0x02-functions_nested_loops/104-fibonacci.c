@@ -8,7 +8,7 @@
  * Return: (Success)
  */
 
-int main (void)
+int main(void)
 {
 	unsigned long int i;
 	unsigned long int bef = 1;
@@ -21,7 +21,7 @@ int main (void)
 
 	printf("%lu", bef);
 
-	for (i = 1; i < 91, i++)
+	for (i = 1; i < 91; i++)
 	{
 		printf(", %lu", aft);
 		aft += bef;
@@ -40,7 +40,7 @@ int main (void)
 		aft1 = aft1 + bef1;
 		bef1 = aft1 - bef1;
 		aft2 = aft2 + bef2;
-		bef2 = aft2 -bef2;
+		bef2 = aft2 - bef2;
 	}
 	printf("\n");
 	return (0);
