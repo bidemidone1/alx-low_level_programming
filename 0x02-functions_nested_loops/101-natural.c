@@ -1,6 +1,6 @@
 /*
  * File: 101-natural.c
- * Auth: vincent kip
+ * Auth: Adele_Dev
  */
 
 #include <stdio.h>
@@ -15,9 +15,9 @@ int main(void)
 {
 	int i, sum = 0;
 
-	for (i = 0, i < 1024, i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if ((i % 3) == 0 || (i % 5) == 0)
+		if ((i % 3) == 0 && (i % 5) == 0)
 			sum += i;
 	}
 
