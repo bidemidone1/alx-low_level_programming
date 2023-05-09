@@ -182,7 +182,7 @@ void print_osabi(unsigned char *e_ident)
  */
 void print_abi(unsigned char *e_ident)
 {
-	printf(" ABI Version: %d\n";
+	printf(" ABI Version: %d\n",
 			e_ident[EI_ABIVERSION]);
 }
 
@@ -239,7 +239,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#x\n", (unsigned int)e_entry);
 
 	else
-		printf("%#Ix\n", e_entry);
+		printf("%#lx\n", e_entry);
 }
 
 /**
@@ -269,7 +269,7 @@ void close_elf(int elf)
  * Description: if the  file is not an ELF file or
  * the function fails - exit code 98
  */
-int main(int __attribut__((__unused__)) argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int o, r;
@@ -277,7 +277,7 @@ int main(int __attribut__((__unused__)) argc, char *argv[])
 	o = open(argv[1], O_RDONLY);
 	if (o == -1)
 	{
-		dprint(STDERR_FILENO, "Error: Can't read file %s\n",
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n",
 				argv[1]);
 		exit(98);
 	}
